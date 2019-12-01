@@ -1,0 +1,158 @@
+<!-- 
+	Just attempting to clone the cybertruck order page!
+	By pie9 - @katieaharshman 
+	
+	It's a mess, but whew! I tried! It's a work in progress, just like me.
+	Created extra minivan parts with https://editor.method.ac/
+	I'll add full svg when I get a chance, for now it's a screenshot image
+	
+-->
+
+<div class="nav">
+	<!-- Tesla US  -->
+	<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3613695/cybertruck-fake-title.jpg' class="fake-logo" alt=''>
+	<div class="fake-logo-country"> <h4>US</h4></div>
+</div>
+
+<div class="container">
+	<div class="wagon-fixed">
+		<div class="logo-container">
+			<div class="logo">
+				<div class="logo1">SWA<div class="logo-letter1">G</div>GER</div>
+				<div class="logo2">WAGO<div class="logo-letter2">N</div></div> 
+			</div>
+		</div>
+		<div class="wagon">
+			<!-- Yeah, I have an invisible image. I gotta figure this out. -->
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3613695/swagwag.png" class="swagger" />
+		</div>
+		<div class="specs">
+			<div class="spec">
+				<h1>450+<span class="spec-small">MI</span></h1><h3>RANGE (EPA EST.)</h3>
+			</div>
+			<div class="spec">
+				<h1>9,5000+<span class="spec-small">LBS</span></h1><h3>TOWING CAPACITY</h3>
+			</div>
+			<div class="spec">
+				<h1>&lt;5.5<span class="spec-small">S</span></h1><h3>0-60 MPH</h3>
+			</div>
+		</div>
+	</div>
+	<div class="left">
+
+	</div>
+	<div class="right">
+		<h2>ORDER SWAGGERWAGON</h2>
+			
+		<form>
+			<label class="motor">
+				<input type="radio" name="motor" id="dual" value="dual" > 
+				<div class="data">
+					<div class="item">DUAL MOTOR AWD</div><div class="price">$49,900</div>
+				</div>
+			</label>
+			<label class="motor">
+				<input type="radio" name="motor" id="tri" value="tri" >
+				<div class="data">
+					<div class="item">TRI MOTOR AWD</div><div class="price">$59,900</div>
+				</div>
+			</label>
+			<label class="motor">
+				<input type="radio" name="motor" id="quad" value="tri" >
+				<div class="data">
+					<div class="item">QUAD MOTOR AWD</div><div class="price">$69,900</div>
+				</div>
+			</label>
+		</form>
+
+		<br />
+		<br />
+		<div class="data">
+				<div class="item self">FULL SELF-DRIVING <span class="added">ADDED</span></div><div class="price price-on">	$7,000</div>
+		</div>
+		<div class="data-p">
+			<p>Selecting Full-Self Driving today will secure your price as it increases in the future.Learn more</p>
+		</div>
+		<br />
+		<br />
+		<div class="data-due">
+			<div class="due">DUE TODAY</div> <div class="due-price">$100</div>
+		</div>
+		<div class="data-p">
+			<p>Fully refundable. You will be able to complete your configuration as production nears in late 2021. Tri Motor AWD production is expected to begin in late 2022.</p>
+		</div>
+		<br />
+		
+		<div class="account" id="account">
+			<form>
+			<h3>ENTER ACCOUNT DETAILS</h3>
+				<label class="acct">
+					<div class="acct-label">First Name</div>
+					<div class="acct-border" id="first" tabindex="0">
+						<input type="text" class="acct-input" id="firstName" onblur="inputReq(event)" onkeyup="typeCheck(event), firstCheck(event)" />
+					</div>
+					<div class="acct-req">REQUIRED</div>
+					
+				</label>
+				<label class="acct">
+					<div class="acct-label">Last Name</div>
+					<div class="acct-border" id="last" tabindex="0">
+						<input type="text" class="acct-input" id="lastName" onblur="inputReq(event)" onkeyup="typeCheck(event), lastCheck(event)" />
+					</div>
+					<div class="acct-req">REQUIRED</div>
+				</label>
+				<label class="acct">
+					<div class="acct-label">Email Address</div>
+					<div class="acct-border" id="email" tabindex="0">
+						<input type="email" class="acct-input" id="emailAddress" onblur="emailCheck(event)" onkeyup="typeCheck(event)" />
+					</div>
+					<div class="acct-req">REQUIRED</div>
+
+				</label>
+				<label class="acct">
+					<div class="acct-label">Phone Number</div>
+					<div class="acct-border" id="phone" tabindex="0">
+						<input type="tel" class="acct-input" id="phoneNumber" onblur="phoneCheck(event)" onkeyup="typeCheck(event)" />
+					</div>
+					<div class="acct-req">REQUIRED</div>
+				</label>
+				<br />
+			<h3>PAYMENT</h3>
+				<label class="acct">
+					<div class="acct-label">Name on Card</div>
+					<div class="acct-border" id="name" tabindex="0">
+						<input type="text" class="acct-input" id="ccName" onblur="inputReq(event)" onkeyup="typeCheck(event)" />
+					</div>
+					<div class="acct-req">REQUIRED</div>
+					
+				</label>
+				<label class="acct">
+					<div class="acct-label">Credit Card Number</div>
+					<div class="acct-border" id="number" tabindex="0">
+						<input type="text" class="acct-input" id="ccNumber" onblur="inputReq(event)" onkeyup="typeCheck(event)" />
+					</div>
+					<div class="acct-req">REQUIRED</div>
+				</label>
+				<div class="acct-cc-exp">
+					<label class="acct acct-exp">
+						<div class="acct-label">Expiration Date</div>
+						<div class="acct-border " id="exp" tabindex="0">
+							<input type="text" placeholder="MM/YY" pattern="(\d{1,2}/\d{2})||(\d{1,2}\d{2})" maxlength="5" class="acct-input" id="expDate" onblur="inputReq(event)" onkeyup="typeCheck(event)" onkeydown="dateCheck(event)" />
+						</div>
+						<div class="acct-req">REQUIRED</div>
+					</label>
+					<label class="acct acct-cvv">
+						<div class="acct-label">CVV</div>
+						<div class="acct-border" id="cvv" tabindex="0">
+							<input type="text" class="acct-input" id="cvvNumber" maxlength="3" onblur="inputReq(event)" onkeyup="typeCheck(event)" />
+						</div>
+						<div class="acct-req">REQUIRED</div>
+					</label>
+				</div>
+				<br />
+		</div>
+			</form>
+		
+		<div class="button" id="buy">BUY NOW</div>
+	</div>
+</div>
